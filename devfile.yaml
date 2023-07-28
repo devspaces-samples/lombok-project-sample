@@ -5,7 +5,10 @@ components:
   - name: tools
     container:
       image: registry.redhat.io/devspaces/udi-rhel8:3.9
-      memoryLimit: 3Gi
+      cpuLimit: '4'
+      cpuRequest: '1'
+      memoryLimit: '3Gi'
+      memoryRequest: '2Gi'
       endpoints:
         - exposure: none
           name: debug
